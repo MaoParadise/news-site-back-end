@@ -5,7 +5,7 @@ if(process.env.NODE_ENV !== 'production') {
 module.exports = {
  
     database: {
-        host: process.env.HOST || 'localhost',
+        host: process.env.BDHOST || 'localhost',
         user: process.env.BDUSER,
         password: process.env.PASSWORD,
         database: process.env.DATABASE
