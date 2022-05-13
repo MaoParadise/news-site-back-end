@@ -70,9 +70,5 @@ app.use('/api/release', require('./routes/releaseRoutes'));
 
 // Starting the server
 app.listen(app.get('port'), () =>{
-    console.log(process.env.HOST);
-    console.log(process.env.BDUSER);
-    console.log(process.env.PASSWORD);
-    console.log(process.env.DATABASE);
     console.log('Server on port', app.get('port'));
 });

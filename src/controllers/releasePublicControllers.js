@@ -4,7 +4,7 @@ const releasePublicCtrl = {}
 
 
 releasePublicCtrl.getYourReleases = async ( req, res) =>{
-    const {start, limit} = req.body;
+    const {start, limit} = req.params;
     const rows =  await pool.query(`SELECT r_elease.* , release_record.MODIFIEDDATERELEASE FROM r_elease INNER JOIN release_record ON r_elease.IDRELEASE = release_record.IDRELEASE WHERE r_elease.IDRELEASESTATE = 11 ORDER BY release_record.MODIFIEDDATERELEASE DESC LIMIT ${start},${limit}`);
     return res.json(rows);
 }

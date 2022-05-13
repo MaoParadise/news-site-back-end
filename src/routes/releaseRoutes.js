@@ -56,7 +56,7 @@ router.get('/getOutstandingReleases', release.getOutstandingReleases);
 
 /* Publics routes */
 
-router.post('/getReleasesPublic', releasePublic.getYourReleases);
+router.get('/getReleasesPublic/:start/:limit', releasePublic.getYourReleases);
 
 router.post('/getReleasesPublicLike', releasePublic.getPublicReleasesLike)
 
@@ -69,5 +69,5 @@ router.get('/getReleasesPublicByID/:id', releasePublic.getPublicReleasesByID);
 router.post('/getCouldBeInteresting', releasePublic.getCouldBeInteresting);
 
 
- 
+  
 module.exports = router;
